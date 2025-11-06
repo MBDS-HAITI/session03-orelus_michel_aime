@@ -1,17 +1,17 @@
 package org.example;
 
-public class Magus extends Character implements Healer{
+public class Dwarf extends Character {
     private static long  round;
-
     private String name;
     private Weapon weapon;
-    private int hpMag;
+    private static int hpDr;
 
-    public Magus(int hpMax, Weapon weapon, String typeName, String name) {
+    public Dwarf(int hpMax, Weapon weapon, String typeName, String name) {
         super(hpMax, weapon, typeName, name);
     }
+
     @Override
     public void action() {
-        System.out.println("Magus action");
+        System.out.println("Dwarf action");
     }
 }
