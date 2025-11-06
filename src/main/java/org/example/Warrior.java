@@ -5,8 +5,9 @@ public class Warrior extends Character implements Attacker {
     private String name;
     private Weapon weapon;
     private int hpWar;
-    public Warrior(int hpMax, Weapon weapon, String typeName, String name) {
-        super(hpMax, weapon, typeName, name);
+    public Warrior(int hpWar, Weapon weapon, String typeName, String name) {
+
+        super(hpWar, weapon, typeName, name);
     }
 
     @Override
