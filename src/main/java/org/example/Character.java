@@ -1,6 +1,6 @@
 package org.example;
 
-abstract class  Character implements Healer,Attacker {
+abstract class  Character {
     private final String name;
     private final String typeName;
     private final Weapon weapon;
@@ -14,4 +14,5 @@ abstract class  Character implements Healer,Attacker {
         this.typeName = typeName;
         this.name = name;
     }
+    public abstract void action();
 }
