@@ -1,6 +1,6 @@
 package org.example;
 
-abstract class  Character {
+abstract class  Character implements Healer,Attacker {
     private final String name;
     private final String typeName;
     private final Weapon weapon;
