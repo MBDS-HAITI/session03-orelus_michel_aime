@@ -12,4 +12,11 @@ public class Weapon {
         this.name = name;
         this.startPower = startPower;
     }
+
+    public String getName() {
+        return name;
+    }
+    public String getStartPower() {
+        return startPower;
+    }
 }
