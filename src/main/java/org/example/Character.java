@@ -1,6 +1,6 @@
 package org.example;
 
-public class  Character {
+abstract class  Character {
     private final String name;
     private final String typeName;
     private final Weapon weapon;
@@ -14,29 +14,5 @@ public class  Character {
         this.typeName = typeName;
         this.name = name;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getTypeName() {
-        return typeName;
-    }
-
-    public Weapon getWeapon() {
-        return weapon;
-    }
-
-    public int getHpMax() {
-        return hpMax;
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public boolean isAlive() {
-        return alive;
-    }
-
+    public abstract void action();
 }
