@@ -8,4 +8,14 @@ public class Colossus extends Character implements Attacker,Healer {
     public void action() {
         System.out.println("Colossus action");
     }
+
+    @Override
+    public int ObjetAttack(Character objective) {
+        return 0;
+    }
+
+    @Override
+    public int cure(Character objective) {
+        return 0;
+    }
 }

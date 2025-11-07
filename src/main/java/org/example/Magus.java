@@ -9,4 +9,9 @@ public class Magus extends Character implements Healer{
     public void action() {
         System.out.println("Magus action");
     }
+
+    @Override
+    public int cure(Character objective) {
+        return 0;
+    }
 }
