@@ -3,13 +3,13 @@ package org.example;
 public class Magus extends Character implements Healer{
     private static long  round;
 
-    private String name;
-    private Weapon weapon;
+    private String typeName;
     private int hpMag;
     private boolean isAlive;
+    private Weapon weapon;
 
-    public Magus(int hpMax, Weapon weapon, String typeName, String name) {
-        super(hpMax, weapon, typeName, name);
+    public Magus(String typeName,int hp, Weapon weapon,Boolean alive) {
+        super(typeName,hp, weapon);
     }
     @Override
     public void action() {

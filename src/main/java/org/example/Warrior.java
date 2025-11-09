@@ -1,16 +1,15 @@
 package org.example;
+import org.example.Weapon;
 
-public class Warrior extends Character implements Attacker {
-    private static long  round;
-    private String name;
-    private Weapon weapon;
+public class Warrior extends Character{
+    private String typeName;
     private int hpWar;
     private boolean isAlive;
-    public Warrior(int hpWar, Weapon weapon, String typeName, String name) {
+    private Weapon weapon;
 
-        super(hpWar, weapon, typeName, name);
+    public Warrior(String typeName,int hp,Weapon weapon,Boolean alive) {
+        super(typeName,hp, weapon);
     }
-
     @Override
     public void action() {
         System.out.println("Warrior action");

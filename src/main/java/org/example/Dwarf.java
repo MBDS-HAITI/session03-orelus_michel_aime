@@ -1,13 +1,14 @@
 package org.example;
 
 public class Dwarf extends Character {
-    private static long  round;
-    private String name;
-    private Weapon weapon;
-    private static int hpDr;
 
-    public Dwarf(int hpMax, Weapon weapon, String typeName, String name) {
-        super(hpMax, weapon, typeName, name);
+    private String typeName;
+    private int hpDr;
+    private boolean isAlive;
+    private Weapon weapon;
+
+    public Dwarf(String typeName,int hp, Weapon weapon,Boolean alive) {
+        super(typeName,hp, weapon);
     }
 
     @Override

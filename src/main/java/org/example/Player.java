@@ -1,24 +1,51 @@
 package org.example;
+import org.example.Character;
 
 import java.util.ArrayList;
 
 public class Player {
-    private static String playerName;
-    private static boolean isActive;
-    private static int round;
+    private String playerName;
+    private boolean isActive;
+    private int round;
     private ArrayList<Character> team;
 
     public Player() {}
 
-    public Character choose_person (Character character) {
-        return character;
+    public Player(String pname,boolean isActive,int round,ArrayList<Character> team) {
+        this.playerName = pname;
+        this.round = round;
+        this.isActive = isActive;
     }
 
-    public void attack_person (Character enemy) {
+    public String getPlayerName() {
+        return playerName;
     }
 
-    public void heal_ally (Character ally) {
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
+    public boolean isActive() {
+        return isActive;
+    }
 
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public int getRound() {
+        return round;
+    }
+
+    public void setRound(int round) {
+        this.round = round;
+    }
+
+    public ArrayList<Character> getTeam() {
+        return team;
+    }
+
+    public void setTeam(ArrayList<Character> team) {
+        this.team = team;
+    }
 }
