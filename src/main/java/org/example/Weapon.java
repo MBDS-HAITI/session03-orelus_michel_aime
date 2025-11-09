@@ -1,6 +1,8 @@
 package org.example;
 
-//private final int wapon_power=0;
-
 public class Weapon {
+     private int gunPower=0;
+     public Weapon(int gunPower){
+         this.gunPower=gunPower;
+     }
 }

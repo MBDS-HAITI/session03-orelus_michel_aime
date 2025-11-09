@@ -19,12 +19,12 @@ public class BattleArena {
         do {
 
             // Ask user for 3 strings
-            System.out.println("Choose the name of the team 1");
+            System.out.println("Choose the name of the Player 1");
             System.out.print("> ");
             String team_name1 = sc.nextLine();
 
 
-            System.out.println("Choose 3 players");
+            System.out.println("Choose 3 human types");
             System.out.println("1 Warrior  2 Magus  3 Colossus  4 Dwarf");
             System.out.print("> ");
 
@@ -68,7 +68,7 @@ public class BattleArena {
 
 
             // Display the strings
-            System.out.println("\nTeam :"+team_name1);
+            System.out.println("\nPlayer : "+team_name1);
             System.out.println("Types : ");
             System.out.println(" " + liste.get(0));
             System.out.println(" " + liste.get(1));

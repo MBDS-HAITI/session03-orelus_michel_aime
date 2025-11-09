@@ -2,30 +2,21 @@ package org.example;
 import org.example.Weapon;
 
 public class Warrior extends Character{
-    private String typeName;
     private String personName;
     private int hpWar;
     private boolean isAlive;
-    private Weapon weapon;
 
-    public Warrior(String typeName,String personName,int hp,Weapon weapon,Boolean alive) {
-        super(typeName,hp, weapon);
-        this.typeName = typeName;
+
+    public Warrior(String typeName,Weapon weapon,String personName,int hpWar,Boolean alive) {
+        super(typeName,weapon);
         this.personName = personName;
-        this.hpWar = hp;
+        this.hpWar = hpWar;
         this.isAlive = alive;
     }
+
     @Override
     public void action() {
         System.out.println("Warrior action");
-    }
-
-    public String getTypeName() {
-        return typeName;
-    }
-
-    public void setTypeName(String typeName) {
-        this.typeName = typeName;
     }
 
     public String getPersonName() {

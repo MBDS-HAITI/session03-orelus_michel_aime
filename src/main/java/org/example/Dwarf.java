@@ -4,15 +4,14 @@ public class Dwarf extends Character {
 
     private String typeName;
     private String personName;
-    private int hpDr;
+    private int hpDw;
     private boolean isAlive;
-    private Weapon weapon;
 
-    public Dwarf(String typeName,String personName,int hp, Weapon weapon,Boolean alive) {
-        super(typeName,hp, weapon);
-        this.typeName = typeName;
+
+    public Dwarf(String typeName,Weapon weapon,String personName,int hpDw,Boolean alive) {
+        super(typeName,weapon);
         this.personName = personName;
-        this.hpDr = hp;
+        this.hpDw = hpDw;
         this.isAlive = alive;
     }
 
@@ -37,12 +36,12 @@ public class Dwarf extends Character {
         this.personName = personName;
     }
 
-    public int getHpDr() {
-        return hpDr;
+    public int getHpDw() {
+        return hpDw;
     }
 
-    public void setHpDr(int hpDr) {
-        this.hpDr = hpDr;
+    public void setHpDw(int hpDw) {
+        this.hpDw = hpDw;
     }
 
     public boolean isAlive() {
@@ -51,13 +50,5 @@ public class Dwarf extends Character {
 
     public void setAlive(boolean alive) {
         isAlive = alive;
-    }
-
-    public Weapon getWeapon() {
-        return weapon;
-    }
-
-    public void setWeapon(Weapon weapon) {
-        this.weapon = weapon;
     }
 }
