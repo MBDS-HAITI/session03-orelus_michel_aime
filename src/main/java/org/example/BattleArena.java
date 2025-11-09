@@ -23,9 +23,7 @@ public class BattleArena {
             System.out.print("> ");
             String team_name1 = sc.nextLine();
 
-
-            System.out.println("Choose 3 human types");
-            System.out.println("1 Warrior  2 Magus  3 Colossus  4 Dwarf");
+            System.out.println("Choose 3 human types : 1 Warrior  2 Magus  3 Colossus  4 Dwarf");
             System.out.print("> ");
 
             Set<Integer> nombres = new HashSet<>(); // pour éviter les doublons

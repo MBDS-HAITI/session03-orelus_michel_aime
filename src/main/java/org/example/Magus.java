@@ -18,6 +18,11 @@ public class Magus extends Character implements Healer{
         System.out.println("Magus action");
     }
 
+    @Override
+    public void addHP() {
+
+    }
+
     public String getPersonName() {
         return personName;
     }

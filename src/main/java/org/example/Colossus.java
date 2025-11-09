@@ -18,6 +18,15 @@ public class Colossus extends Character implements Attacker,Healer {
         System.out.println("Colossus action");
     }
 
+    public void addHP() {
+        isAlive = true;
+    }
+
+    @Override
+    public int removeHP() {
+        return 0;
+    }
+
     public String getPersonName() {
         return personName;
     }
