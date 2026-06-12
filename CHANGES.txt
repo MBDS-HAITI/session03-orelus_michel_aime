@@ -1,0 +1,91 @@
+========================================
+  BATTLE ARENA - RESUME DES MODIFICATIONS
+========================================
+
+DATE : 2026-06-11
+PROJET : session03-orelus_michel_aime
+
+----------------------------------------
+FICHIERS MODIFIES
+----------------------------------------
+
+1. Character.java
+   - Ajout de l'initialisation hp = hpMax dans le constructeur
+   - Ajout de la methode takeDamage(int amount) : reduit les HP, marque mort si HP = 0
+   - Ajout de la methode restoreHp(int amount) : restaure les HP (plafonne a hpMax)
+   - Ajout des getters : getName(), getTypeName(), getWeapon(), getHp(), getHpMax(), isAlive()
+   - Ajout de toString() : affichage formate du statut du personnage
+
+2. Weapon.java
+   - Renommage de la methode objective() en rollDamage()
+   - Correction du calcul de variance pour obtenir [0.85, 1.15] correctement
+   - Valeur minimale de degats fixee a 1 (au lieu de 0)
+
+3. Warrior.java
+   - Simplification du constructeur : prend uniquement le nom (stats fixes : 100 HP, Epee 25)
+   - Implementation de l'interface Attacker
+   - Implementation de ObjetAttack() : inflige des degats via rollDamage()
+   - Implementation de action() : affichage de statut
+
+4. Magus.java
+   - Simplification du constructeur : prend uniquement le nom (stats fixes : 130 HP, Baton 15)
+   - Ajout de l'implementation de l'interface Attacker (en plus de Healer)
+   - Implementation de ObjetAttack() : attaque avec le baton
+   - Implementation de cure() : soigne 35 HP a un allie
+   - Implementation de action() : affichage de statut
+
+5. Colossus.java
+   - Simplification du constructeur : prend uniquement le nom (stats fixes : 180 HP, Marteau 20)
+   - Implementation de ObjetAttack() : attaque avec le marteau
+   - Implementation de cure() : soigne 25 HP a un allie
+   - Implementation de action() : affichage de statut
+
+6. Player.java
+   - Implementation complete de la classe (etait vide)
+   - Ajout du champ name et de la liste team
+   - Ajout de addCharacter(), isDefeated(), getTeam(), getName()
+   - Ajout de getAliveCharacters() : retourne uniquement les personnages vivants
+   - Ajout de printTeamStatus() : affiche le statut de toute l'equipe
+
+7. Main.java
+   - Remplacement du contenu par la boucle de jeu complete
+   - Phase 1 - Setup : creation des equipes avec validation des noms et des types
+   - Phase 2 - Combat : boucle de tours, choix du personnage, choix de l'action, choix de la cible
+   - Phase 3 - Resultats : affichage du gagnant, du nombre de tours, statut final de chaque personnage
+   - Helpers : readInt(), printBanner(), printBothTeams()
+
+----------------------------------------
+FICHIER CREE
+----------------------------------------
+
+8. Dwarf.java (NOUVEAU)
+   - Nouveau type de personnage : guerrier fragile mais extremement puissant
+   - Stats : 70 HP, Hache de Guerre (puissance 40)
+   - Implements Attacker uniquement
+   - Implementation de ObjetAttack() et action()
+
+----------------------------------------
+RECAPITULATIF DES STATS PAR TYPE
+----------------------------------------
+
+  Type       | HP  | Arme          | Puissance | Soins
+  -----------|-----|---------------|-----------|------
+  Warrior    | 100 | Epee          |    25     |  non
+  Magus      | 130 | Baton         |    15     |  35 HP
+  Colossus   | 180 | Marteau       |    20     |  25 HP
+  Dwarf      |  70 | Hache de Guerre|  40     |  non
+
+  Note : les degats sont aleatoires (+/- 15% de la puissance de base)
+
+----------------------------------------
+CONCEPTS OOP APPLIQUES
+----------------------------------------
+
+  - Classe abstraite : Character (force l'implementation de action())
+  - Heritage         : Warrior, Magus, Colossus, Dwarf heritent de Character
+  - Interfaces       : Attacker (ObjetAttack), Healer (cure)
+  - Polymorphisme    : instanceof Attacker/Healer pour determiner les actions disponibles
+  - Encapsulation    : HP et etat geres en prive dans Character via takeDamage/restoreHp
+  - Composition      : chaque Character possede une instance de Weapon
+
+========================================
